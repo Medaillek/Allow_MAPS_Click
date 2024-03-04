@@ -20,4 +20,19 @@ if (url.startsWith('https://www.google.com/search')) {
                 )
             })
         })
+    const isACompanyAddress = Array.from(document.querySelectorAll('a')).find(a => a.href?.includes('/maps/'))
+
+    if (isACompanyAddress) {
+        const companyMap = document.querySelector('#lu_map')
+        if (companyMap) {
+            companyMap.style.cursor = 'pointer'
+            companyMap.addEventListener('click', (e) => {
+                window.open(
+                    isACompanyAddress.href,
+                    '_blank'
+                )
+            })
+
+        }
+    }
 }
