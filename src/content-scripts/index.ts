@@ -7,13 +7,17 @@ if (url.startsWith('https://www.google.com/search')) {
 		.forEach((img) => {
 			img.style.cursor = 'pointer'
 			console.log(img)
-			const address = img.closest('.lu_map_section')?.closest('.dirs')
-				?.parentElement?.textContent
+			const address = img
+				.closest('.lu_map_section')
+				?.closest('.dirs')
+				?.parentElement?.querySelector('b')
+				?.textContent?.trim()
+
 			img.addEventListener('click', (e) => {
 				window.open(
-					`https://www.google.fr/maps/place/${encodeURIComponent(
-						address ?? ''
-					)}`,
+					`https://www.google.fr/maps/place/${
+						address?.replace(/\s/gm, '+') ?? ''
+					}`,
 					'_blank'
 				)
 			})

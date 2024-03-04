@@ -6,14 +6,10 @@ export default defineManifest((env) => {
 	return {
 		name: 'Open Maps Images in Google Maps',
 		description:
-			'Since 03-04-2024, Google has removed links to google maps in search results. This extension adds a link to the google maps page of the image.',
+			'Add a link to Maps images in search results to open them in Google Maps.',
 		version: '1.0.0',
 		manifest_version: 3,
 		minimum_chrome_version: '105',
-		background: {
-			service_worker: 'src/background/index.ts',
-			type: 'module',
-		},
 		icons: {
 			16: `public/icons/16.png`,
 			32: `public/icons/32.png`,
