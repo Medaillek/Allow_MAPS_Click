@@ -1,3 +1,10 @@
+## Install from the Chrome Web Store
+https://chromewebstore.google.com/detail/Click-on-Maps/jigebplbfpcgnjlmhmmihkijiokeidic?hl=fr
+
+
+OR
+--
+
 To download and install a Chrome extension manually from a local directory, follow these steps:
 
 1. Open the Chrome browser and navigate to chrome://extensions.
